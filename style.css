@@ -89,3 +89,39 @@ input:focus {
   top:-10px;
   right:-5px;
 }
+
+div#notification-area {
+  display: block;
+  padding: 13px 12px 12px;
+  font-weight: bold;
+  font-size: 14px;
+  color: white;
+  background-color: #2ba6cb;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  margin-bottom: 12px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  text-shadow: 0 -1px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+div#notification-area .box-icon {
+  display: block;
+  float: left;
+  background-image: url('icon.png');
+  width: 30px;
+  height: 25px;
+  margin-top: -2px;
+  background-position: -8px -8px;
+}
+div#notification-area p {
+  margin: 0px;
+}
+
+#notification-area.error {
+  background-color: #c60f13;
+  color: #fff;
+  text-shadow: 0 -1px rgba(0, 0, 0, 0.3);
+}

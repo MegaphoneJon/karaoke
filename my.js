@@ -17,10 +17,11 @@ function basicSearch(searchTerms) {
     // Clear the existing search list
     $(".list").empty();
     if (json.length === 0) {
+      $(".list").before('<div id="notification-area" class="error"></div>');
       $("#notification-area").addClass('error').text("No Results Found");
     }
     else {
-      $("#notification-area").removeClass('error').text("");
+      $("#notification-area").remove();
       $.each(json, function ( key, song) {
         $(".list").append( "<li class=song><span class=artist>" + song.artist + "</span><span class=name>" + song.name + "</span></li>" );
       });

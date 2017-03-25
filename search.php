@@ -20,7 +20,7 @@ $pdo = new PDO($dsn, $user, $pass, $opt);
 
 $search = $_GET['search'];
 
-$stmt = $pdo->prepare('SELECT artist, name FROM songs WHERE artist LIKE :search OR name LIKE :search2 LIMIT 100');
+$stmt = $pdo->prepare('SELECT artist, name FROM songs WHERE artist LIKE :search OR name LIKE :search2 LIMIT 500');
 $stmt->execute(['search' => "%" . $search . "%", 'search2' => "%" . $search . "%"]);
 $resultJSON = json_encode($stmt->fetchAll(PDO::FETCH_ASSOC));
 header('Content-Type: application/json');

@@ -4,7 +4,7 @@
  */
 
 // Connect to the database
-$host = '127.0.0.1';
+$host = 'db';
 $db   = 'karaoke';
 $user = 'karaoke';
 $pass = 'starrtunes';
